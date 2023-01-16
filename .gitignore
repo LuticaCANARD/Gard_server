@@ -1,0 +1,3 @@
+/MainAPI/dockerfile
+/MainAPI/docker-compose.yml
+/MainAPI/.dockerignore
