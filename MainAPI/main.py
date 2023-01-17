@@ -6,4 +6,7 @@ class Lathion :
     def db_test(self) :
         #DB와 Server간 통신을 확인한다.
         db = DB()
-        return db.execute_query('SELECT * FROM tb_users')
+        return db.execute_query('SELECT * FROM tb_users',())
+
+la = Lathion()
+la.db_test()

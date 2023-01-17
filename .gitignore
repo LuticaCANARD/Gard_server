@@ -1,3 +1,5 @@
-/MainAPI/dockerfile
-/MainAPI/docker-compose.yml
-/MainAPI/.dockerignore
+/dockerfile
+/docker-compose.yml
+/.dockerignore
+/requirements.txt
+/MainAPI/__pycache__
