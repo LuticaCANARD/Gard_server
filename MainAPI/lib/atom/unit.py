@@ -40,13 +40,3 @@ class Lation_unit :
         else :
             self.db.execute_query('UPDATE tb_user_divion SET hp = %s, atk = %s, def = %s, modi = %s WHERE unitno = %s',(self._info["hp"],self._info["atk"],self._info["def"],self._info["modi"],self._info["unitno"],))
         return
-    
-
-class GroundUnit(Lation_unit) :
-    pass
-
-class SeaUnit(Lation_unit) :
-    pass
-
-class AirUnit(Lation_unit) :
-    pass
