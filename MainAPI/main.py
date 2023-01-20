@@ -1,12 +1,15 @@
 from DB import DB
+from Lathion_lib import Lathion
+import fastapi as fa
 
-class Lathion :
-    def main(self) :
-        pass
-    def db_test(self) :
-        #DB와 Server간 통신을 확인한다.
-        db = DB()
-        return db.execute_query('SELECT * FROM tb_users',())
 
 la = Lathion()
-la.db_test()
+app = fa.FastAPI()
+
+@app.get('/')
+async def test() :
+    return {"msg":"server is okay!"}
+
+@app.get('/DBtest')
+async def dbtest():
+    return dict(la.db_test())
