@@ -3,23 +3,27 @@ class Lation_unit :
     #  모든 유닛의 기본이 되는 class
     db = DB()
     _info = {             # 유닛의 기본 정보. tb_user_divion에 정의 예정.
-        "type"   : None,  # 병종
-        "name"   : None,  # 유닛 이름
-        "group"  : None,  # 상위조직
-        "contry" : None,  # 국적및 소속
-        "unitno" : None,  # 내부 처리용 유닛용 no 
+        "type"   : None,   # 병종
+        "name"   : None,   # 유닛 이름
+        "group"  : None,   # 상위조직
+        "contry" : None,   # 국적및 소속
+        "unitno" : None,   # 내부 처리용 유닛용 no 
     }
     _stat = {             # 유닛의 현재 상태. update마다 사용하며, 이 역시 tb_user_divion에 규정한다. (미정)
-        "hp"   : None,    # 체력
-        "atk"  : None,    # 공격력
-        "def"  : None,    # 방어력
-        "modi" : []       # 모디파이어, 상황
+        "hp"     : None,     # 체력
+        "atk"    : None,     # 공격력
+        "def"    : None,     # 방어력
+        "modi"   : [],       # 모디파이어, 상황
+        "action" : None,     # 현재 남은 행동력
+        "costs"  : None      # 유닛의 상황만을 고려한 현 유지비
     }
-    _spec={               # 유닛의 original spec. reference value로 사용된다.tb_divion_ref에 저장한다.
-        "hp"   : None,    # 체력
-        "atk"  : None,    # 공격력
-        "def"  : None,    # 방어력
-        "modi" : []       # 모디파이어, 상황
+    _spec={                # 유닛의 original spec. reference value로 사용된다.tb_divion_ref에 저장한다. 사용용도는 caching
+        "hp"   : None,      # 체력
+        "atk"  : None,      # 공격력
+        "def"  : None,      # 방어력
+        "modi" : [],        # 모디파이어, 상황
+        "action" : None,    # 초기 행동력
+        "costs"  : None     # 병종 자체의 유지비
     }
     def __init__(self,data) -> None:
         # 유닛을 생성 할 때 사용하는 설정이다.
