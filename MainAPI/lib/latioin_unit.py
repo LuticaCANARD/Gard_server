@@ -7,7 +7,6 @@ from atom.unit import Lation_unit
 
 class GroundUnit(Lation_unit) :
     #Lation_unit 을 상속하여 Ground용 unit을 구축함.
-
     pass
 
 class SeaUnit(Lation_unit) :
@@ -16,4 +15,8 @@ class SeaUnit(Lation_unit) :
 
 class AirUnit(Lation_unit) :
     #Lation_unit 을 상속하여 Air 용 unit을 구축함.
+    pass
+
+class Spaceunit(Lation_unit) :
+    #Lathion_unit을 상속하여 Space용 unit을 구현함.
     pass
