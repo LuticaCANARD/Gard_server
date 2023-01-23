@@ -34,4 +34,21 @@ class DB:
             cursor.close() 
             db.close()
         return row
+
+    def update_object(self,table_name:str,index_key:str,update:dict) :
+        query = 'UPDATE ' + table_name + ' SET '
+
+        ct = 0
+        v = len(update.keys())
+        for key in update.keys() :
+            ct += 1
+            if key == index_key : continue
+            query += key + '= %{'+key+'}s'
+            if ct == v : break
+            else : query += ', '
+
+        query += ' WHERE ' +  index_key + ' = %{'+index_key+'}s;'
+        return self.execute_query(query,update)
+        
+
     

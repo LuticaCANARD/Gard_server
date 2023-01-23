@@ -10,12 +10,12 @@ class ProcessBattle(Process) :
         "attack_unit" :  [] 
     }
     def __init__(self,data:dict) :
-        _battledata = data
+        self._battledata = data
 
     def load_location(self) :
         # 위치 정보 조회 -> 제약 사항 검색
         location = Province(self._battledata["province"])
-        
+        self._battledata["defence_unit"].extend( location.load_arms())
         pass
 
 
