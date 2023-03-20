@@ -1,3 +1,6 @@
+# Notices
+- This repo is no use now.
+(duplicated)
 # 대전제
 * 이 프로그램은 게임 가르드의 server를 목표로 한다.
 * 이 프로그램는 웹 뿐만아니라 게임등 각종 형태의 client programs의 수요에 맞춰 밀표한 데이터를 전달하는 API의 형식을 띤다.
